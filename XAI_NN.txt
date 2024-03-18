@@ -1,0 +1,17 @@
+1. Saliency Maps (Gradient-based): These methods highlight the input features that have the most influence on the model's output. Common techniques include Gradient-based Saliency Map (Grad-CAM), Integrated Gradients, and SmoothGrad.
+
+2. Gradient-weighted Class Activation Mapping (Grad-CAM): Grad-CAM generates class activation maps by computing the gradient of the target class score with respect to feature maps of a convolutional neural network's last convolutional layer.
+
+3. Integrated Gradients: This method computes the integral of gradients along the path from a baseline (e.g., an input with zero features activated) to the input of interest. It attributes importance to features based on their contribution to the prediction.
+
+4. Layer-wise Relevance Propagation (LRP): LRP decomposes the model's prediction by attributing relevance scores to individual neurons, and then redistributes these scores layer by layer through the network using gradient-based rules.
+
+5. SmoothGrad: This method improves the interpretability of gradient-based saliency maps by adding random noise to the input and averaging the gradients over multiple noisy samples. It helps reduce the noise in attribution maps.
+
+6. Vanilla Gradients: Simply computing the gradients of the output with respect to the input can provide some explanation of the model's decision by highlighting how changes in input features affect the output.
+
+7. Guided Backpropagation: This method modifies backpropagation to only allow positive gradients to flow through positive activation regions and zero gradients to flow through negative activation regions. It helps in visualizing more interpretable gradients.
+
+8. DeepLIFT (Deep Learning Important FeaTures): DeepLIFT assigns contribution scores to each input feature by comparing the activation of each neuron to a reference activation. It uses gradients to determine how much each neuron's activation differs from the reference.
+
+9. Layer-wise Relevance Conservation (LRC): LRC ensures that the sum of relevances assigned to neurons in each layer remains constant, allowing for more consistent explanations across layers.
